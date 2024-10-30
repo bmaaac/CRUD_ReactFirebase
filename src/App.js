@@ -1,3 +1,24 @@
+// import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+// import { Navbar, Footer } from "./components/Layout";
+// import Home from "./components/Home";
+// import Write from "./components/Write";
+// import "bootstrap/dist/css/bootstrap.min.css";
+
+// function App() {
+//   return (
+//     <Router>
+//       <Navbar />
+//       <Routes>
+//         <Route path="/" element={<Home />} />
+//         <Route path="/write" element={<Write />} />
+//       </Routes>
+//       <Footer />
+//     </Router>
+//   );
+// }
+
+// export default App;
+
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { Navbar, Footer } from "./components/Layout";
 import Home from "./components/Home";
@@ -9,10 +30,10 @@ function App() {
     <Router>
       <Navbar />
       <Routes>
-        {/* <Route path="/" element={<Home />} /> */}
-        <Route path="/" element={<Home />}>
-          <Route path="/write" element={<Write />} />
-        </Route>
+        <Route path="/" element={<Home />} />
+        <Route path="/write" element={<Write />} />
+        {/* Default route to handle unmatched paths */}
+        <Route path="*" element={<Home />} />
       </Routes>
       <Footer />
     </Router>
