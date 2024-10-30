@@ -4,7 +4,7 @@ export function Navbar() {
   return (
     <nav class="navbar navbar-expand-lg border-bottom box-shadow">
       <div class="container">
-        <Link class="navbar-brand" to="/">
+        <Link class="navbar-brand">
           {/* <img
             src="/icon.png"
             draggable="false"
