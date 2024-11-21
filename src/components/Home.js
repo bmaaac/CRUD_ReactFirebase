@@ -11,7 +11,7 @@ const Home = () => {
   // State for editable fields
   const [mealCategory, setMealCategory] = useState("");
   const [mealName, setMealName] = useState("");
-  const [mealAdds, setMealAdds] = useState("");
+  const [Mealinfo, setMealinfo] = useState("");
   const [mealPrice, setMealPrice] = useState("");
   const [mealCost, setMealCost] = useState("");
   const [mealStocks, setMealStocks] = useState("");
@@ -46,7 +46,7 @@ const Home = () => {
     setCurrentProduct(product);
     setMealCategory(product.MealCategory);
     setMealName(product.MealName);
-    setMealAdds(product.MealAdds);
+    setMealinfo(product.Mealinfo);
     setMealPrice(product.MealPrice);
     setMealCost(product.MealCost);
     setMealStocks(product.MealStocks);
@@ -60,7 +60,7 @@ const Home = () => {
     await set(productRef, {
       MealCategory: mealCategory,
       MealName: mealName,
-      MealAdds: mealAdds,
+      Mealinfo: Mealinfo,
       MealPrice: mealPrice,
       MealCost: mealCost,
       MealStocks: mealStocks,
@@ -73,7 +73,7 @@ const Home = () => {
             ...item,
             MealCategory: mealCategory,
             MealName: mealName,
-            MealAdds: mealAdds,
+            Mealinfo: Mealinfo,
             MealPrice: mealPrice,
             MealCost: mealCost,
             MealStocks: mealStocks,
@@ -127,7 +127,7 @@ const Home = () => {
             <tr key={index}>
               <td>{menu.MealCategory}</td>
               <td>{menu.MealName}</td>
-              <td>{menu.MealAdds}</td>
+              <td>{menu.Mealinfo}</td>
               <td>{menu.MealPrice}</td>
               <td>{menu.MealCost}</td>
               <td>{menu.MealStocks}</td>
@@ -182,9 +182,9 @@ const Home = () => {
                 <input
                   type="text"
                   className="form-control mb-2"
-                  placeholder="Meal Adds"
-                  value={mealAdds}
-                  onChange={(e) => setMealAdds(e.target.value)}
+                  placeholder="Meal Description"
+                  value={Mealinfo}
+                  onChange={(e) => setMealinfo(e.target.value)}
                 />
                 <input
                   type="number"
